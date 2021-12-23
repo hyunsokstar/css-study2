@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  font-family: "Releway", sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.item {
+  width: 300px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+/* .item input[type="text"],
+.item input[type="email"],
+.item input[type="tel"] { */
+.item input {
+  border: 1px solid lightgray;
+  width: inherit;
+  height: 40px;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  /*  */
+  padding-left: 60px;
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.item .fa {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* color: gray; */
+  color: #fff;
+  background-color: gray;
+
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  transition: 0.3s;
+  /*  */
+  border-radius: 5px 0 0 5px;
+}
+
+.item input:focus {
+  border: 1px solid dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+
+.item input:focus + .fa {
+  /* color: dodgerblue; */
+  background-color: dodgerblue;
+}
+
+.item input:focus::placeholder {
+  visibility: hidden;
+}

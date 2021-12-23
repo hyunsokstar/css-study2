@@ -1,0 +1,67 @@
+/* @import url('https://fonts.googleapis.com/css?family=Releway'); */
+
+body {
+  font-family: "Releway", sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 플렉스의 기준 높이 값이 됨 */
+  background-color: rgb(198, 222, 243);
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.container {
+  /* border: 1px solid purple; */
+  width: 240px;
+  height: 340px;
+}
+
+.app-ui {
+  width: 210px;
+  height: 300px;
+  /* border: 1px solid black; */
+  transform: rotate(-30deg) skewX(20deg);
+  position: relative;
+  /* box-shadow: 0 0 20px rgba(211, 50, 50, 0.3); */
+  transition: 0.5s;
+}
+
+.app-ui:hover {
+  /* width: inherit; */
+  /* height: inherit; */
+  /* border: 2px solid blue; */
+}
+
+.app-ui img {
+  position: absolute;
+  transition: 0.5s;
+}
+
+.app-ui:hover img:nth-child(1) {
+  transform: translate(40px, -40px);
+  opacity: 0.4;
+}
+
+.app-ui:hover img:nth-child(2) {
+  transform: translate(80px, -80px);
+  opacity: 0.6;
+}
+
+.app-ui:hover img:nth-child(3) {
+  transform: translate(120px, -120px);
+  opacity: 0.8;
+}
+
+.app-ui:hover img:nth-child(4) {
+  transform: translate(160px, -160px);
+  opacity: 1;
+}

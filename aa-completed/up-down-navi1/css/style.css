@@ -1,0 +1,122 @@
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 0;
+  background-color: #222;
+  color: #fff;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.item {
+  display: inline-block;
+  width: 200px;
+  margin-right: 10px;
+  /* border: 1px solid red; */
+  height: 200px;
+  position: relative;
+}
+
+.item:hover .front {
+  top: -50%;
+}
+
+/*  */
+.item:hover .front img {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  height: 50%;
+  animation: ani 1s linear infinite;
+}
+/*  */
+
+.item:hover .back {
+  top: 50%;
+}
+
+.back,
+.front {
+  position: absolute;
+  top: 0;
+  transition: 0.05s;
+}
+
+.front {
+  border: 1px solid purple;
+  background-color: #333;
+  z-index: 1;
+  /*  */
+  height: 100%;
+  /*  */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.front img {
+  width: 150px;
+  height: inherit;
+}
+
+.front h2 {
+  margin-top: 4px;
+}
+
+.back {
+  background-color: #fff;
+  height: inherit;
+  color: #222;
+  border: 1px solid #333;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.back a {
+  background-color: yellowgreen;
+  color: #fff;
+  padding: 5px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  /* border: 2px solid purple; */
+  margin-top: 4px;
+}
+
+.back p {
+  height: 70%;
+}
+
+.back a:hover {
+  background-color: rgb(212, 238, 159);
+}
+
+.back-content {
+  /* border: 2px solid rgb(245, 101, 6); */
+  margin-top: -5px;
+  margin-bottom: 32px;
+  box-sizing: border-box;
+}
+
+@keyframes ani {
+  0% {
+    transform: scacle(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

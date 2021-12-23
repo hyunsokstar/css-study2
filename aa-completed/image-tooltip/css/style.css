@@ -1,0 +1,63 @@
+body {
+  font-family: "Releway", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.icon {
+  display: inline-block;
+  /* border: 1px solid red; */
+  width: 200px;
+  height: 125px;
+  margin: 10px;
+  position: relative;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.icon span {
+  position: absolute;
+  /* border: 1px solid red; */
+  background-color: #000;
+  color: #fff;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  /* display: none; */
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+/*  */
+.icon span:after {
+  content: ""; /* 필수 속성값 */
+  position: absolute; /* icon의 relative 와 같이 작동 */
+  /* background-color: red; */
+  background-color: black;
+  width: 10px;
+  height: 10px;
+  bottom: -5px;
+  left: 50%;
+  transform: rotate(45deg) translateX(-50%);
+}
+
+.icon:hover span {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,49 @@
+body {
+  font-family: "Releway", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  color: #222;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.dropdown {
+  border:1px solid black;
+  width: 200px;
+}
+
+.dropdown-btn {
+  width: inherit;
+  padding: 10px;
+  font-size: 18px;
+  background-color: yellowgreen;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdown-submenu {
+  width: inherit;
+  display: none;
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+}
+
+.dropdown-submenu a {
+  display: block; /* 줄 구분을 위해 */
+  padding: 7px;
+  text-align: center;
+}
+
+.dropdown-submenu a:hover {
+  background-color: #eee;
+}
+
+.dropdown:hover .dropdown-submenu {
+  display: block; /* 보이도록 하기 위해 */
+}

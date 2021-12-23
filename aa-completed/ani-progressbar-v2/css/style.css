@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  font-family: "Releway", sans-serif;
+  line-height: 1.5em;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.skil-progress {
+  width: 500px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.item {
+}
+
+.item p {
+  overflow: hidden; /* 부모 높이 찾기*/
+  margin-bottom: 5px; /* p 태그 기본 마진 줄이기 */
+}
+
+.item p span:nth-child(1) {
+  float: left;
+}
+
+.item p span:nth-child(2) {
+  float: right;
+}
+
+.progress {
+  border: 1px solid #6cd4c4;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.skil-progress h1 {
+  text-align: center;
+}
+
+.progress-level {
+  height: 10px;
+  background: linear-gradient(to right, crimson, gold);
+  animation-name: ani;
+  animation-duration: 1s;
+
+  animation: ani 1s;
+  animation-fill-mode: both;
+
+}
+
+@keyframes ani {
+  0% {
+    width: 0;
+  }
+}
+
+/* .skil-progress .item:nth-child(1) {
+  border: 5px solid purple;
+  background-color: purple;
+} */
+
+.skil-progress .item:nth-of-type(1) .progress-level {
+  animation-delay: 0s;
+}
+.skil-progress .item:nth-of-type(2) .progress-level {
+  animation-delay: 0.2s;
+}
+.skil-progress .item:nth-of-type(3) .progress-level {
+  animation-delay: 0.4s;
+}
+
+.skil-progress .item:nth-of-type(4) .progress-level {
+  animation-delay: 0.6s;
+}
+
+.skil-progress .item:nth-of-type(5) .progress-level {
+  animation-delay: 0.8s;
+}

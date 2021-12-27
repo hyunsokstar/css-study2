@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+  font-family: "Releway", sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.tab-inner {
+  border: 1px solid red;
+  width: 300px;
+  height: 350px;
+}
+
+.tab-inner img {
+  width: 300px;
+}
+
+input[name="tab-menu"] {
+  display: none;
+}
+
+.slide {
+  /* border: 8px solid brown; */
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-inner {
+  position: absolute;
+  width: 900px;
+  font-size: 0;
+  top: 0;
+  left: 0;
+  /* 11 */
+  transition: 0.5s;
+  
+}
+
+.btn {
+  /* border: 1px solid pink; */
+  text-align: center;
+  margin-top: 24px;
+}
+
+.btn label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: lightgray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[id=tab1]:checked ~ .slide .slide-inner {
+  /* border: 1px solid black; */
+  left: 0;
+}
+input[id=tab2]:checked ~ .slide .slide-inner {
+  left: -300px;
+}
+input[id=tab3]:checked ~ .slide .slide-inner {
+  left: -600px;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1] {
+  background-color: crimson;
+}
+
+input[id=tab2]:checked ~ .btn label[for=tab2] {
+  background-color: crimson;
+}
+
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+  background-color: crimson;
+}
